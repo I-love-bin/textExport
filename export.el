@@ -20,7 +20,7 @@
  "Export string."
  (interactive)
  (setq name (substring (shell-command-to-string "whoami") 0 -1))
- (run-at-time "3 min" 90 (lambda () (exportStr))))
+ (lambda () (exportStr)))
 
 (defun exportStr ()
  (setq bufferStr (buffer-string))
